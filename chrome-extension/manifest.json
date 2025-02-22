@@ -2,23 +2,20 @@
     "manifest_version": 3,
     "name": "PhishShield AI",
     "version": "1.0",
-    "description": "AI-powered phishing detection for Gmail.",
+    "description": "Scans emails for potential phishing attempts.",
     "permissions": [
-        "storage",
         "activeTab",
-        "scripting"
-    ],
-    "host_permissions": [
-        "https://mail.google.com/*"
+        "scripting",
+        "storage"
     ],
     "background": {
-        "service_worker": "scripts/background.js"
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
-            "matches": ["https://mail.google.com/*"],
-            "js": ["scripts/content.js"],
-            "css": ["css/content.css"]
+            "matches": ["<all_urls>"],
+            "js": ["front-end-files/scripts/content.js"],
+            "css": ["front-end-files/styles/content.css"]
         }
     ],
     "icons": {

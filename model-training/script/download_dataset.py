@@ -18,6 +18,6 @@ def download_and_unzip_dataset(dataset, download_path, unzip_path):
 
 if __name__ == '__main__':
     dataset = 'naserabdullahalam/phishing-email-dataset'
-    download_path = 'data/raw/'
-    unzip_path = 'data/raw/'
+    download_path = 'model-training/data/raw/'
+    unzip_path = 'model-training/data/raw/'
     download_and_unzip_dataset(dataset, download_path, unzip_path)
