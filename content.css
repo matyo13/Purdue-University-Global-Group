@@ -1,0 +1,160 @@
+/* Phishing warning banner styles */
+.phishshield-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+}
+
+/* Warning banner header */
+.phishshield-warning strong {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Warning details section */
+.phishshield-warning-details {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #ffeeba;
+}
+
+/* Confidence indicator */
+.phishshield-confidence {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #f8d7da;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+/* Indicators list */
+.phishshield-warning ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.phishshield-warning li {
+    margin: 4px 0;
+    position: relative;
+    padding-left: 16px;
+}
+
+.phishshield-warning li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #856404;
+}
+
+/* Dismiss button */
+.phishshield-dismiss {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    color: #856404;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.phishshield-dismiss:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Animation for warning banner */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.phishshield-warning {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Scanned email indicator */
+.phishshield-scanned {
+    position: relative;
+}
+
+/* Safe email indicator (optional) */
+.phishshield-safe {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: #28a745;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background-color: rgba(40, 167, 69, 0.1);
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+/* High-risk warning variant */
+.phishshield-warning.high-risk {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Medium-risk warning variant */
+.phishshield-warning.medium-risk {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+/* Low-risk warning variant */
+.phishshield-warning.low-risk {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Make sure our styles don't conflict with Gmail's dark mode */
+@media (prefers-color-scheme: dark) {
+    .phishshield-warning {
+        background-color: rgba(255, 243, 205, 0.1);
+        border-color: rgba(255, 238, 186, 0.2);
+        color: #ffe69c;
+    }
+
+    .phishshield-warning-details {
+        border-top-color: rgba(255, 238, 186, 0.2);
+    }
+
+    .phishshield-confidence {
+        background-color: rgba(248, 215, 218, 0.1);
+    }
+
+    .phishshield-safe {
+        background-color: rgba(40, 167, 69, 0.2);
+        color: #28a745;
+    }
+}
