@@ -38,9 +38,9 @@ def train_model(data_file):
     print(classification_report(y_test, y_test_pred))
 
     # Save the model
-    joblib.dump(model, '../Purdue-University-Global-Group/models/trained_model.pkl')
-    joblib.dump(vectorizer, '../Purdue-University-Global-Group/models/vectorizer.pkl')
+    joblib.dump(model, '../model-training/models/trained_model.pkl')
+    joblib.dump(vectorizer, '../model-training/models/vectorizer.pkl')
 
 if __name__ == '__main__':
-    train_model('../Purdue-University-Global-Group/data/raw/phishing_email.csv')
+    train_model('../model-training/data/raw/phishing_email.csv')
 
