@@ -1,3 +1,4 @@
+import os
 import joblib
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -15,11 +16,17 @@ def predict_emails(model, vectorizer, emails):
     return predictions
 
 if __name__ == '__main__':
+    # Get the absolute paths
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, '../models/trained_model.pkl')
+    vectorizer_path = os.path.join(base_dir, '../models/vectorizer.pkl')
+    test_data_path = os.path.join(base_dir, '../data/test_data/test_data.csv')
+
     # Load the model and vectorizer
-    model, vectorizer = load_model_and_vectorizer('../Purdue-University-Global-Group/models/trained_model.pkl', '../Purdue-University-Global-Group/models/vectorizer.pkl')
+    model, vectorizer = load_model_and_vectorizer(model_path, vectorizer_path)
 
     # Load the synthetic test data
-    test_df = pd.read_csv('../Purdue-University-Global-Group/data/test_data/test_data.csv')
+    test_df = pd.read_csv(test_data_path)
 
     # Predict whether the emails are phishing or not
     predictions = predict_emails(model, vectorizer, test_df['text_combined'])

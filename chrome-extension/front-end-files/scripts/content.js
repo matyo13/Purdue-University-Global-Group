@@ -36,9 +36,17 @@ async function scanEmails() {
     const emailContent = extractEmailContent(emailElement);
     
     try {
-      const analysis = await chrome.runtime.sendMessage({
-        type: 'SCAN_EMAIL',
-        emailContent
+      const analysis = await new Promise((resolve, reject) => {
+        chrome.runtime.sendMessage({
+          type: 'SCAN_EMAIL',
+          emailContent
+        }, response => {
+          if (response.error) {
+            reject(response.error);
+          } else {
+            resolve(response);
+          }
+        });
       });
       
       if (analysis.isPhishing) {
