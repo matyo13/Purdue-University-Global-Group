@@ -1,7 +1,10 @@
-# Purdue University Global Group Project
+# Purdue Worldwide Boilermake XII
 
-## Overview
-This project includes a Chrome extension that scans emails for potential phishing attempts using a trained machine learning model. The model is served via a Flask application hosted on an AWS server.
+## Repository Structure
+- `new_chrome_extension/`: Contains the Chrome extension files.
+- `model-training/`: Contains the model training files.
+- `server/`: Contains the Flask application for serving the model.
+
 
 ## Repository Structure
 - `chrome-extension/`: Contains the Chrome extension files.
@@ -38,3 +41,20 @@ This project includes a Chrome extension that scans emails for potential phishin
 6. Run the predict script to test the model
     ```sh
     python script/predict.py
+
+    
+### Flask Server
+1. Navigate to `server/`
+2. Install the necessary dependencies
+    ```sh
+    pip install -r server/requirements.txt
+3. Run the flask server
+    ```sh
+    python app.py
+
+## Using the Chrome Extension with the Flask Server
+1. Ensure the flask server is running.
+2. Use the Chrome extension to extract email content from Gmail.
+3. The extension will send the extraccted email content to the Flask server for prediction.
+4. The prediction result (Phishing or Legitimate) will be displayed in the extension popup.
+

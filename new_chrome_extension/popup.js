@@ -8,8 +8,21 @@ document.getElementById("extractBtn").addEventListener("click", () => {
             (injectionResults) => {
                 if (injectionResults && injectionResults[0] && injectionResults[0].result) {
                     let emailData = injectionResults[0].result;
-                    document.getElementById("subject").innerText = emailData.subject;
-                    document.getElementById("body").innerText = emailData.body;
+
+                    // Send email content to the Flask server
+                    fetch('http://localhost:5000/predict', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email_content: emailData.body })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        let prediction = data.prediction === 1 ? 'Phishing' : 'Legitimate';
+                        document.getElementById("prediction").innerText = `Prediction: ${prediction}`;
+                    })
+                    .catch(error => console.error('Error:', error));
                 }
             }
         );
