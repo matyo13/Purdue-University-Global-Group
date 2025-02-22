@@ -5,8 +5,8 @@ Repository for BoilerMake XII
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/your-ml-project.git
-    cd your-ml-project
+    git clone https://github.com/<yourusername>/Purdue-University-Global-Group.git
+    cd Purdue-University-Global-Group
 
 2. Install Dependencies:
     ```bash
