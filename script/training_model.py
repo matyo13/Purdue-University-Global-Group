@@ -43,3 +43,4 @@ def train_model(data_file):
 
 if __name__ == '__main__':
     train_model('../Purdue-University-Global-Group/data/raw/phishing_email.csv')
+
