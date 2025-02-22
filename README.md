@@ -22,3 +22,15 @@ Repository for BoilerMake XII
         chmod 600 ~/.kaggle/kaggle.json
         
         On Windows, place the kaggle.json file in the C:\Users\<YourUsername>\.kaggle directory
+
+4. Download and unzip the dataset from Kaggle
+    ```bash
+    python script/download_dataset.py
+
+5. Train the model
+    ```bash
+    python script/training_model.py
+
+6. Run the predict script to test the model
+    ```bash
+    python script/predict.py
