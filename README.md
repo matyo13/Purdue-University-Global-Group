@@ -47,7 +47,7 @@
 1. Navigate to `server/`
 2. Install the necessary dependencies
     ```sh
-    pip install -r server/requirements.txt
+    pip install -r requirements.txt
 3. Run the flask server
     ```sh
     python app.py
