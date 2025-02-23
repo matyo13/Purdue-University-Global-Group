@@ -49,11 +49,11 @@
 ## File Descriptions
 
 ### Chrome Extension Files
-- `new_chrome_extension/manifest.json`: Configuration file for the Chrome extension.
-- `new_chrome_extension/styles.css`: Styles for the extension popup.
-- `new_chrome_extension/popup.html`: HTML for the extension popup.
-- `new_chrome_extension/popup.js`: JavaScript for handling user interactions in the popup.
-- `new_chrome_extension/content.js`: JavaScript for extracting email content from Gmail.
+- `Anti-Phish AI/manifest.json`: Configuration file for the Chrome extension.
+- `Anti-Phish AI/styles.css`: Styles for the extension popup.
+- `nAnti-Phish AI/popup.html`: HTML for the extension popup.
+- `Anti-Phish AI/popup.js`: JavaScript for handling user interactions in the popup.
+- `Anti-Phish AI/content.js`: JavaScript for extracting email content from Gmail.
 
 ### Model Training Files
 - `model-training/data/test_data/test_data.csv`: Test data for model evaluation.
