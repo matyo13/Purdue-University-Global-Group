@@ -56,4 +56,3 @@
 2. Use the Chrome extension to extract email content from Gmail.
 3. The extension will send the extraccted email content to the Flask server for prediction.
 4. The prediction result (Phishing or Legitimate) will be displayed in the extension popup.
-
