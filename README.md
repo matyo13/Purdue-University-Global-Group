@@ -41,7 +41,6 @@
 6. Run the predict script to test the model
     ```sh
     python script/predict.py
-
     
 ### Flask Server
 1. Navigate to `server/`
