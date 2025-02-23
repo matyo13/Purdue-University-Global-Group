@@ -51,7 +51,7 @@
 ### Chrome Extension Files
 - `Anti-Phish AI/manifest.json`: Configuration file for the Chrome extension.
 - `Anti-Phish AI/styles.css`: Styles for the extension popup.
-- `nAnti-Phish AI/popup.html`: HTML for the extension popup.
+- `Anti-Phish AI/popup.html`: HTML for the extension popup.
 - `Anti-Phish AI/popup.js`: JavaScript for handling user interactions in the popup.
 - `Anti-Phish AI/content.js`: JavaScript for extracting email content from Gmail.
 
